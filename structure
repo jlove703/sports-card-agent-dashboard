@@ -1,0 +1,109 @@
+// src/app/layout.tsx
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'Sports Card Agent Dashboard',
+  description: 'AI-powered sports card investment intelligence',
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
+  )
+}
+
+// src/app/page.tsx
+import Dashboard from '../components/Dashboard'
+
+export default function Home() {
+  return <Dashboard />
+}
+
+// src/app/globals.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// src/components/Dashboard.tsx
+// (This would be the same React component from the artifact above)
+
+// .gitignore
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Next.js
+/.next/
+/out/
+
+# Production
+/build
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env*.local
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# README.md
+# Sports Card Agent Dashboard
+
+An AI-powered dashboard for sports card investment intelligence.
+
+## Features
+- Real-time portfolio tracking
+- AI-powered buy/sell alerts
+- Market trend analysis
+- Break-even calculations
+- Cool factor scoring
+
+## Getting Started
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Run the development server:
+```bash
+npm run dev
+```
+
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Deployment
+
+This app is configured for easy deployment on Vercel.
+
+## Powered by
+- Next.js
+- React
+- Tailwind CSS
+- N8N Workflows
